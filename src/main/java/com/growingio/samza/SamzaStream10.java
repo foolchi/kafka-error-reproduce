@@ -19,7 +19,7 @@ public class SamzaStream10 implements StreamTask {
 
         int logval;
         try {
-            logval = Integer.parseInt((String) msg.get("log"));
+            logval = Integer.parseInt((String) msg.get("log")); // 这里少了trim!!!
         } catch (Exception e) {
             e.printStackTrace();
             return;
